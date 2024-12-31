@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-optical-sizing: auto;
+    font-size: 16px;
+}
+
+/* Header Styling */
+@media screen and (max-width: 1280px){
+    header ul {
+        right: 0;
+        height: calc(100vh - 120px);
+        width: 100%;
+        opacity:0;
+    }
+}
+
+.inActiveMobileMenu {
+    top: -1250px;
+    opacity: 0;
+}
+
+.activeMobileMenu{
+    top: 90px;
+    opacity:1;
+}
