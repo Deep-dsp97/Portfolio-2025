@@ -16,14 +16,44 @@
         width: 100%;
         opacity:0;
     }
+    .inActiveMobileMenu {
+        top: -1250px;
+        opacity: 0;
+    }
+    
+    .activeMobileMenu{
+        top: 90px;
+        opacity:1;
+    }
 }
 
-.inActiveMobileMenu {
-    top: -1250px;
-    opacity: 0;
+/* Hero Section */
+.hero-section{
+    min-height: calc(100vh - 250px);
 }
 
-.activeMobileMenu{
-    top: 90px;
-    opacity:1;
+/* About Section */
+.bottom-after-border::after{
+    content:'';
+    position: absolute;
+    width: 50px;
+    height:2px;
+    background: rgb(79, 70, 229);
 }
+
+.bottom-after-border-top-65-center::after{
+    left: 50%;
+    transform: translate(-50%, 0);
+    top:65px;
+    bottom:0
+}
+
+.bottom-after-border-top-50-left::after{
+    left: 2px;
+    bottom: -20px;
+}
+
+/* .about-section{
+    background: linear-gradient(0deg, #e6eae9 10%, #ffffff 10%);
+    border-radius: 50px;
+} */

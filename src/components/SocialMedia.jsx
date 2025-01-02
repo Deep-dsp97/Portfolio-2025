@@ -1,12 +1,12 @@
 const SocialMedia = () => {
   return (
-    <div>
+    <div className="mt-3">
         {/* Github */}
         <a href="/"
             type="button"
             data-twe-ripple-init
             data-twe-ripple-color="light"
-            className="mb-2 inline-block rounded bg-[#333] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+            className="mb-2 mx-1 inline-block rounded bg-[#333] px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
             <span className="[&>svg]:h-4 [&>svg]:w-4">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ const SocialMedia = () => {
             type="button"
             data-twe-ripple-init
             data-twe-ripple-color="light"
-            className="mb-2 inline-block rounded bg-[#0077b5] px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+            className="mb-2 mx-1 inline-block rounded bg-[#0077b5] px-3 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
           <span className="[&>svg]:h-4 [&>svg]:w-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
