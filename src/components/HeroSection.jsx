@@ -2,7 +2,7 @@ import Button from "./LetsTalkButton";
 
 const HeroSection = () => {
   return (
-    <section className="hero-section bg-violet-50 shadow-inner flex flex-col justify-center items-center py-8 mt-5 rounded-3xl">
+    <section className="hero-section xl:container mx-auto bg-violet-50 shadow-inner flex flex-col justify-center items-center py-8 mt-5 rounded-3xl">
         <div>
             <h1 className="sm:mb-5 xl:mb-6 flex flex-col items-center xl:items-start">
                 <span className="hey-there text-violet-900 font-outfit text-md sm:text-lg md:text-3xl font-bold">Hey There!, I&apos;m-<br/></span>

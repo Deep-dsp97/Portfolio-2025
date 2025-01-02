@@ -57,3 +57,97 @@
     background: linear-gradient(0deg, #e6eae9 10%, #ffffff 10%);
     border-radius: 50px;
 } */
+
+/* Experience */
+
+.exp-section::before{
+    content: '';
+    position: absolute;
+    top:37%;
+    left:22%;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(0deg, #e6eae933 100%, #ffffff 0%);
+    border-radius: 50px;
+    transform: rotate(45deg);
+    animation: rotate 15s infinite linear; 
+}
+
+.exp-section::after{
+    content: '';
+    position: absolute;
+    bottom:10%;
+    right:22%;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(0deg, #e6eae933 100%, #ffffff 0%);
+    border-radius: 50px;
+    transform: rotate(70deg);
+    animation: rotate 15s infinite linear; 
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ----- Timeline */
+
+.timeline-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: rgb(245, 243, 255);
+    z-index: 1
+}
+
+.timeline-block {
+    width: -webkit-calc(50% + 8px);
+    width: -moz-calc(50% + 8px);
+    width: calc(50% + 8px);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    clear: both;
+ }
+
+ .marker {
+    min-width: 16px;
+    height: 16px;
+    border: 2px solid #F5F7FA;
+    background: rgb(79, 70, 229);
+    z-index: 30;
+ }
+
+ @media screen and (max-width: 768px) {
+
+    .timeline-container:before {
+       left: 8px;
+       width: 2px;
+    }
+    .timeline-block {
+       width: 100%;
+       margin-bottom: 30px;
+    }
+
+    .exp-section::before{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .exp-section::after{
+        width: 200px;
+        height: 200px;
+    }
+ }

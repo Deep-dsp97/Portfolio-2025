@@ -12,7 +12,7 @@ const Header = () => {
   }
 
   return (
-    <header className="pt-3 sticky top-0 z-50">
+    <header className="xl:container mx-auto pt-3 sticky top-0 z-50">
         <nav className="grid grid-cols-3 gap-4 items-center border rounded-full pr-3 pl-8 py-2 bg-white relative">
             <a href="/" className="col-span-2 xl:col-span-1" aria-label="Header logo">
                 <img className="max-w-12" src="/images/Logo_dark.svg" alt="Deep Patel Brand Logo" />
