@@ -36,10 +36,10 @@ const Contact = () => {
     };
 
   return (
-    <section className="contact-section pt-20 observe-section rounded-t-3xl" id="contact">
+    <section className="contact-section py-20 observe-section rounded-t-3xl px-3 md:px-0" id="contact">
         <div className='max-w-6xl mx-auto flex flex-col items-center'>
             <h2 className="relative text-center font-outfit text-2xl md:text-4xl font-bold text-blue-900 bottom-after-border bottom-after-border-top-65-center">Contact Me</h2>
-            <form className="flex flex-col justify-center mt-20 bg-white rounded-3xl" onSubmit={onSubmit}>
+            <form className="flex flex-col justify-center mt-20 bg-white rounded-3xl p-5 md:p-8" onSubmit={onSubmit}>
                 <div className="input-box">
                     <label className="font-outfit font-bold">Full Name</label>
                     <input type="text" className="field" placeholder='Enter your name' name="name" required />
