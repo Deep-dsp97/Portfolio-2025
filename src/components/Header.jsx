@@ -1,10 +1,46 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Button from './LetsTalkButton';
 import SocialMedia from "./SocialMedia";
 
 const Header = () => {
 
   const [ openMobileMenu, setOpenMobileMenu ] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const sections = ['home','about','skills','exp','portfolio'];
+
+    // Observer to track section visibility
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setActiveSection(entry.target.id);
+              }
+            });
+          },
+          { threshold: 0.55 } // Adjust threshold as needed
+        );
+    
+        sections.forEach((id) => {
+          const element = document.getElementById(id);
+          if (element) {
+            observer.observe(element);
+          }
+        });
+    
+        return () => observer.disconnect();
+      }, []);
+
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const section = document.getElementById(id);
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const renderedLinks = sections.map((section) => {
+    return <li className="xl:me-2" key={section}><a href="/" onClick={(e) => handleScroll(e, section)}className={`${activeSection === section ? 'bg-indigo-600 font-bold text-white focus:text-white' : 'focus:text-indigo-600'} capitalize block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed hover:border-indigo-600 hover:text-indigo-600 transitoin-all`}>{section}</a></li>
+  })
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -18,10 +54,11 @@ const Header = () => {
                 <img className="max-w-12" src="/images/Logo_dark.svg" alt="Deep Patel Brand Logo" />
             </a>
             <ul className={`flex xl:flex-row flex-col items-center justify-center xl:justify-evenly xl:relative absolute bg-white xl:bg-transparent border-x xl:border-x-0 ${!openMobileMenu ? 'inActiveMobileMenu' : 'activeMobileMenu'}`}>
-                <li className="xl:me-2"><a href="/" className="block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed focus:text-indigo-600 hover:border-indigo-600 hover:text-indigo-600 transitoin-all">Home</a></li>
-                <li className="xl:me-2"><a href="/" className="block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed focus:text-indigo-600 hover:border-indigo-600 hover:text-indigo-600 transitoin-all">About</a></li>
-                <li className="xl:me-2"><a href="/" className="block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed focus:text-indigo-600 hover:border-indigo-600 hover:text-indigo-600 transitoin-all">Portfolio</a></li>
-                <li className="xl:me-2"><a href="/" className="block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed focus:text-indigo-600 hover:border-indigo-600 hover:text-indigo-600 transitoin-all">Contact</a></li>
+                {/* <li className="xl:me-2"><a href="/" className={`block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed focus:text-indigo-600 hover:border-indigo-600 hover:text-indigo-600 transitoin-all`}>Home</a></li>
+                <li className="xl:me-2"><a href="/" className={`block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed focus:text-indigo-600 hover:border-indigo-600 hover:text-indigo-600 transitoin-all`}>About</a></li>
+                <li className="xl:me-2"><a href="/" className={`block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed focus:text-indigo-600 hover:border-indigo-600 hover:text-indigo-600 transitoin-all`}>Portfolio</a></li>
+                <li className="xl:me-2"><a href="/" className={`block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed focus:text-indigo-600 hover:border-indigo-600 hover:text-indigo-600 transitoin-all`}>Contact</a></li> */}
+                {renderedLinks}
                 <li className="xl:hidden flex flex-col items-center justify-center mt-6">
                     <Button customClass="sm:hidden inline-flex mt-4 text-white bg-indigo-600 border-transparent hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Lets Talk</Button>
                     <SocialMedia/>

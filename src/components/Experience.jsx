@@ -37,7 +37,7 @@ const Experience = () => {
     )
   })
   return (
-    <section className="exp-section pt-24 mx-auto relative">
+    <section className="exp-section pt-24 mx-auto relative observe-section" id="exp">
         <h2 className="relative text-center font-outfit text-2xl md:text-4xl font-bold text-blue-900 bottom-after-border bottom-after-border-top-65-center">My Experience</h2>
         <div className="timeline-container max-w-6xl relative overflow-hidden mx-auto mt-20">
             {renderedHistory}

@@ -1,6 +1,8 @@
+import Button from './LetsTalkButton';
+
 const About = () => {
   return (
-    <section className="about-section pt-24 max-w-6xl mx-auto relative">
+    <section className="about-section pt-24 max-w-6xl mx-auto relative observe-section" id="about">
         <h2 className="relative text-center font-outfit text-2xl md:text-4xl font-bold text-blue-900 bottom-after-border bottom-after-border-top-65-center">About Me</h2>
         <div className="grid grid-cols-4 pt-20 items-center">
             <div className="col-span-4 lg:col-span-3 grid grid-cols-2 items-end mb-5">
@@ -14,6 +16,10 @@ const About = () => {
                 <img src="/images/DeepPatel.png" alt="Deep Patel Profile Image" />
             </div>
             <p className="col-span-4 font-dmsans md:px-3 italic font-bold max-w-3xl mt-5">Empowering innovation through creative and efficient problem-solving, with a strong focus on delivering impactful solutions that drive meaning results and foster growth.</p>
+            <div className="col-span-4 flex flex-row items-center mt-5">
+              <Button customClass="inline-flex text-white bg-indigo-600 border-transparent hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Download CV</Button>
+              <Button customClass="inline-flex ml-3 border-indigo-500 bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white">Contact Me</Button>
+            </div>
         </div>
     </section>
   )

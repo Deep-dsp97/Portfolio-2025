@@ -52,10 +52,6 @@ const Portfolio = () => {
 
   const renderedProjects = projects.map((project, index) => {
 
-    if( project.live || project.git){
-        console.log("Hello Thter");
-    }
-
     return(
         <div className="col-span-6 sm:col-span-3 md:col-span-2 flex flex-col border rounded-3xl overflow-hidden mb-12" key={index}>
             <div className="relative">
@@ -81,7 +77,7 @@ const Portfolio = () => {
   })
 
   return (
-    <section className="portfolio-section pt-24 max-w-6xl mx-auto relative">
+    <section className="portfolio-section pt-24 max-w-6xl mx-auto relative observe-section" id="portfolio">
         <h2 className="relative text-center font-outfit text-2xl md:text-4xl font-bold text-blue-900 bottom-after-border bottom-after-border-top-65-center">My Portfolio</h2>
         <div className="portfolio-container grid grid-cols-6 gap-5 pt-20">
             {renderedProjects}
