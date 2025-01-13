@@ -21,7 +21,7 @@ const SocialMedia = () => {
         </a>
 
         {/* Linkedin */}
-        <a  href="www.linkedin.com/in/deeppatel97" 
+        <a  href="https://www.linkedin.com/in/deeppatel97" 
             type="button"
             data-twe-ripple-init
             data-twe-ripple-color="light"
