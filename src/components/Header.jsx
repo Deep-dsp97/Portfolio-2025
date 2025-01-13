@@ -7,7 +7,7 @@ const Header = () => {
   const [ openMobileMenu, setOpenMobileMenu ] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const sections = ['home','about','skills','exp','portfolio'];
+  const sections = ['home','about','skills','exp','portfolio','contact'];
 
     // Observer to track section visibility
     useEffect(() => {
@@ -36,10 +36,13 @@ const Header = () => {
     e.preventDefault();
     const section = document.getElementById(id);
     if (section) section.scrollIntoView({ behavior: "smooth" });
+    if(window.innerWidth < 1280){
+      setOpenMobileMenu(!openMobileMenu);
+    }
   }
 
-  const renderedLinks = sections.map((section) => {
-    return <li className="xl:me-2" key={section}><a href="/" onClick={(e) => handleScroll(e, section)}className={`${activeSection === section ? 'bg-indigo-600 font-bold text-white focus:text-white' : 'focus:text-indigo-600'} capitalize block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed hover:border-indigo-600 hover:text-indigo-600 transitoin-all`}>{section}</a></li>
+  const renderedLinks = sections.slice(0,-1).map((section) => {
+    return <li className="xl:me-2" key={section}><a href="/" onClick={(e) => handleScroll(e, section)} className={`${activeSection === section ? 'bg-indigo-600 font-bold text-white focus:text-white' : 'focus:text-indigo-600'} capitalize block font-dmsans py-4 px-8 rounded-full border border-transparent focus:border-dashed hover:border-indigo-600 hover:text-indigo-600 transitoin-all`}>{section}</a></li>
   })
 
   const handleClick = (event) => {
@@ -65,7 +68,7 @@ const Header = () => {
                 </li>
             </ul>
             <div className="flex flex-row justify-end">
-                <Button customClass="hidden sm:inline-flex text-white bg-indigo-600 border-transparent hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Lets Talk</Button>
+                <Button customClass="hidden sm:inline-flex text-white bg-indigo-600 border-transparent hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600" scrollToId="contact">Lets Talk</Button>
                 <a href="/" className={`block xl:hidden hanburger-icon p-3 sm:p-4 border border-indigo-600 ${ !openMobileMenu ? 'rounded-full' : 'rounded-3xl'} ms-2 transition-all`} onClick={handleClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className={`h-6 w-6 stroke-indigo-500 ${ !openMobileMenu ? '' : 'rotate-45'}`}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />

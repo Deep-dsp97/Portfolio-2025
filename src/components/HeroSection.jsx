@@ -10,8 +10,8 @@ const HeroSection = () => {
             </h1>
             <p className="font-outfit profession text-violet-900 text-md sm:text-lg md:text-3xl font-bold text-center xl:text-left">Front-End Web Developer </p>
             <div className="flex flex-row items-center">
-              <Button customClass="inline-flex mt-4 text-white bg-indigo-600 border-transparent hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">My portfolio</Button>
-              <Button customClass="inline-flex mt-4 ml-3 border-indigo-500 bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white">Contact Me</Button>
+              <Button customClass="inline-flex mt-4 text-white bg-indigo-600 border-transparent hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600" scrollToId="portfolio">My portfolio</Button>
+              <Button customClass="inline-flex mt-4 ml-3 border-indigo-500 bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white" scrollToId="contact">Contact Me</Button>
             </div>
         </div>
     </section>

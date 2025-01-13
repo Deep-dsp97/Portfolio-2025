@@ -212,3 +212,8 @@ form .input-box .field.mess {
 .contact-section{
     background: linear-gradient(0deg, rgb(245,243,255) 100%, #ffffff 10%);
 }
+
+.negative-margin-rl-12{
+    margin-left: -12px;
+    margin-right: -12px;
+}

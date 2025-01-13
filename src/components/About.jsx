@@ -17,8 +17,8 @@ const About = () => {
             </div>
             <p className="col-span-4 font-dmsans md:px-3 italic font-bold max-w-3xl mt-5">Empowering innovation through creative and efficient problem-solving, with a strong focus on delivering impactful solutions that drive meaning results and foster growth.</p>
             <div className="col-span-4 flex flex-row items-center mt-5">
-              <Button customClass="inline-flex text-white bg-indigo-600 border-transparent hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">Download CV</Button>
-              <Button customClass="inline-flex ml-3 border-indigo-500 bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white">Contact Me</Button>
+              <Button customClass="inline-flex text-white bg-indigo-600 border-transparent hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600" fileName="deepkumar_patel_resume.pdf">Download CV</Button>
+              <Button customClass="inline-flex ml-3 border-indigo-500 bg-white text-indigo-500 hover:bg-indigo-500 hover:text-white" scrollToId="contact">Contact Me</Button>
             </div>
         </div>
     </section>
